@@ -14,10 +14,10 @@ const createFile =  async(multiplier = 5, list = false, t = 10) => {
         }
         
         if( list ) {
-            console.log('==================='.rainbow.bold);
-            console.log(`   Table of: ${multiplier}.`.rainbow.bold);
-            console.log('==================='.rainbow.bold);
-            console.log(`${output}`.random);
+            console.log('==================='.green.bold);
+            console.log(`   Table of: ${multiplier}`.white.bold);
+            console.log('==================='.green.bold);
+            console.log(`${output}`.green);
         }
              
         fs.writeFileSync(`./output/tableOf-${multiplier}.txt`, output);
