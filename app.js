@@ -1,4 +1,4 @@
-const {createFile} = require('./helpers/multiplicar');
+const {createFile} = require('./helpers/multiplication');
 const argv = require('./config/yargs')
 
 console.clear();
