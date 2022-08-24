@@ -2,34 +2,33 @@ const fs = require('fs');
 const colors = require('colors');
 
 
-// Tarea: convertir esta funcion 'crearArchivo' en promesa
-const crearArchivo =  async(base = 5, listar = false, h = 20) => {
+
+const createFile =  async(multiplier = 5, list = false, t = 10) => {
 
     try { 
         
-        let salida = '';
+        let output = '';
         
-        for (let i = 1; i <= h; i++) {
-            salida += `${base} x ${i} = ${base*i}\n`;
+        for (let i = 1; i <= t; i++) {
+            output += `${multiplier} x ${i} = ${multiplier*i}\n`;
         }
         
-        if( listar ) {
+        if( list ) {
             console.log('==================='.rainbow.bold);
-            console.log(`   Tabla del: ${base}.`.rainbow.bold);
+            console.log(`   Table of: ${multiplier}.`.rainbow.bold);
             console.log('==================='.rainbow.bold);
-            console.log(`${salida}`.random);
+            console.log(`${output}`.random);
         }
              
-        fs.writeFileSync(`./salida/tabla-${base}.txt`, salida);
+        fs.writeFileSync(`./output/tableOf-${multiplier}.txt`, output);
     
-        return `tabla-${base}.txt creado`;
+        return `table-${multiplier}.txt`;
         
     } catch (err) {
         throw err;
-    }
-        
+    }       
 }
 
 module.exports = {
-    crearArchivo
+    createFile
 }

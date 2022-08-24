@@ -1,25 +1,25 @@
 const argv = require('yargs')
-                .option('b', {
-                    alias: 'base',
+                .option('m', {
+                    alias: 'multiplier',
                     type: 'number',
                     demandOption: true,
-                    describe: 'Es la base de la tabla de multiplicar'
+                    describe: 'Defines the multiplier'
                 })
                 .option('l', {
-                    alias: 'listar',
+                    alias: 'list',
                     type: 'boolean',
                     default: false,
-                    describe: 'Muestra la tabla en consola'
+                    describe: 'Show the table on console'
                 })
-                .option('h', {
-                    alias: 'hasta',
+                .option('t', {
+                    alias: 'to',
                     type: 'number',
                     default: 10,
-                    describe: 'Define el maximo de numeros a multiplicar'
+                    describe: 'Defines the number of numbers to be multiplied'
                 })
                 .check( (argv, options) => {
-                    if ( isNaN(argv.b) ){
-                        throw 'La base tiene que ser un numero'
+                    if ( isNaN(argv.m) ){
+                        throw 'The multiplier has to be a number'
                     }
                     return true; 
                 })
