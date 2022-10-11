@@ -1,9 +1,15 @@
 #Notes
+
 ```
+
+Usage: node app [-m]* [-l] [-t]
+*required
+
+
 Options:
-    --help          Show help                               [boolean]
-    --version       Show version number                     [boolean]
-    -b, --base      Defines the multiplier                  [number] [required]
-    -l, --listar    Show the table in console               [boolean] [default: false]
-    -t, --to     Defines the multiplicand (default=10)      [number] [default: 10]
+    --help              Show help                                                                       [boolean]
+    --version           Show version number                                                             [boolean]
+    -m, --multiplier    Defines the multiplier                                                          [number] [required]
+    -l, --list          Show the table in console                                                       [boolean] [default: false]
+    -t, --to            Defines the multiplicand (amount of numbers to be multiplied) (default=10)      [number] [default: 10]
 ```
