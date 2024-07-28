@@ -1,7 +1,9 @@
-#Notes
+# Notes
+
+This is the legacy version of the Multiplication Table App.
+This was made with JavaScript, Yargs & Colors.
 
 ```
-
 Usage: node app [-m]* [-l] [-t]
 *required
 
