@@ -18,13 +18,15 @@ export class SaveFile implements SaveFileUseCase {
   execute({
     fileContent,
     filePath = 'outputs',
-    fileName = 'tabla',
+    fileName = 'table',
   }: Options): boolean {
     try {
       fs.mkdirSync(filePath, { recursive: true });
 
       fs.writeFileSync(`${filePath}/${fileName}.txt`, fileContent);
-      console.log(`${fileName}.txt creado en ${filePath}/${fileName}.txt`);
+      console.log(
+        `${fileName}.txt created in path: ${filePath}/${fileName}.txt`
+      );
       return true;
     } catch (error) {
       console.error(error);

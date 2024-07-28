@@ -6,7 +6,7 @@ const { b: base, l: limit, s: showTable } = yarg;
 let outputMessage = '';
 const headerMessage = `
 ============================
-    Tabla del: ${base}
+    Table of: ${base}
 ============================
 `;
 for (let i = 1; i <= limit; i++) {
@@ -21,5 +21,5 @@ if (showTable) {
 const outputPath = `output/`;
 
 fs.mkdirSync(outputPath, { recursive: true });
-fs.writeFileSync(`${outputPath}tabla-${base}.txt`, outputMessage);
-console.log(`tabla-${base}.txt creado en ${outputPath}`);
+fs.writeFileSync(`${outputPath}table-${base}.txt`, outputMessage);
+console.log(`table-${base}.txt created in ${outputPath}`);

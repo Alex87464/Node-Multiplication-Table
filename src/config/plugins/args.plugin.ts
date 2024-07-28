@@ -6,34 +6,34 @@ export const yarg = yargs(hideBin(process.argv))
     alias: 'base',
     type: 'number',
     demandOption: true,
-    describe: 'Es la base de la tabla de multiplicar',
+    describe: 'It is the base of the multiplication table',
   })
   .option('l', {
     alias: 'limit',
     type: 'number',
     default: 10,
-    describe: 'Limita la cantidad de elementos a mostrar',
+    describe: 'Limits the number of elements to display',
   })
   .option('s', {
     alias: 'show',
     type: 'boolean',
     default: false,
-    describe: 'Muestra la tabla en consola',
+    describe: 'Displays the table in the console',
   })
   .option('n', {
     alias: 'name',
     type: 'string',
-    default: 'tabla',
-    describe: 'Nombre del archivo a guardar',
+    default: 'table',
+    describe: 'Name of the file to save',
   })
   .option('d', {
     alias: 'dir',
     type: 'string',
     default: 'outputs',
-    describe: 'Directorio donde se guarda el archivo',
+    describe: 'Directory where the file is saved',
   })
   .check((argv, options) => {
-    if (argv.b < 1) throw 'La base debe ser mayor a 0';
+    if (argv.b < 1) throw 'The base must be greater than 0';
 
     return true;
   })
