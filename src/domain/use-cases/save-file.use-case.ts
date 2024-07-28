@@ -17,7 +17,7 @@ export class SaveFile implements SaveFileUseCase {
 
   execute({
     fileContent,
-    filePath = 'output',
+    filePath = 'outputs',
     fileName = 'tabla',
   }: Options): boolean {
     try {
