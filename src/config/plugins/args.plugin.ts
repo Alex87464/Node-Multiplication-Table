@@ -20,6 +20,18 @@ export const yarg = yargs(hideBin(process.argv))
     default: false,
     describe: 'Muestra la tabla en consola',
   })
+  .option('n', {
+    alias: 'name',
+    type: 'string',
+    default: 'tabla',
+    describe: 'Nombre del archivo a guardar',
+  })
+  .option('d', {
+    alias: 'dir',
+    type: 'string',
+    default: 'outputs',
+    describe: 'Directorio donde se guarda el archivo',
+  })
   .check((argv, options) => {
     if (argv.b < 1) throw 'La base debe ser mayor a 0';
 
