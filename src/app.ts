@@ -11,7 +11,10 @@ const headerMessage = `
 for (let i = 1; i <= 10; i++) {
   outputMessage += `${base} x ${i} = ${base * i}\n`;
 }
-
 outputMessage = headerMessage + outputMessage;
 
-fs.writeFileSync(`./output/tabla-${base}.txt`, outputMessage);
+const outputPath = `output/`;
+
+fs.mkdirSync(outputPath, { recursive: true });
+fs.writeFileSync(`${outputPath}tabla-${base}.txt`, outputMessage);
+console.log(`tabla-${base}.txt creado en ${outputPath}`);
