@@ -1,17 +1,22 @@
-
 {
-  "name": "03---bases-node",
-  "version": "0.0.2",
-  "description": "Multiplication table generator ",
-  "main": "app.js",
+  "name": "multiplication-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "base3": "node app --base=3"
+    "dev": "ts-node src/app.ts",
+    "dev:nodemon": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
   },
-  "author": "Alex Oliva",
-  "license": "MIT",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "yargs": "^17.5.1"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
   }
 }

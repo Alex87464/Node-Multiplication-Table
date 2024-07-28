@@ -1,2 +1,5 @@
-node_modules/
-output/*.txt
+node_modules
+dist
+coverage
+
+pnpm-lock.yaml
